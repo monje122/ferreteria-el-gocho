@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <title>Comercial Ferretero EL GOCHO | ¡Sí hay! - Ferretería y Materiales</title>
+  <meta name="description" content="Comercial Ferretero El Gocho. Herramientas, plomería, electricidad, pinturas y materiales de construcción con stock real. Precios en Dólares y Bolívares con pedidos directos a WhatsApp.">
+
+  <!-- Mobile & PWA Optimization (iOS & Android) -->
+  <meta name="theme-color" content="#1e3a8a">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Ferretería El Gocho">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="assets/logo.png">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-banner" aria-label="Información de la tienda">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap; gap: 0.5rem;">
+      <div class="top-banner-left">
+        <span class="top-banner-badge">¡SÍ HAY!</span>
+        <span>🚚 Entregas a domicilio y retiro en tienda | 📍 Atención de Lunes a Sábado</span>
+      </div>
+      <div class="rate-control-wrapper">
+        <button id="rate-tag-button" class="rate-tag" title="Haz clic para modificar la tasa del día">
+          <span>🇻🇪 Tasa:</span>
+          <strong id="banner-rate-value">1$ = 52.50 Bs.</strong>
+          <span style="font-size: 0.75rem; opacity: 0.85;">✏️ Cambiar</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Logo & Brand -->
+        <a href="#" class="brand-wrapper" title="Ferretería El Gocho">
+          <img src="assets/logo.png" alt="Logo Comercial Ferretero El Gocho" class="brand-logo-img">
+          <div class="brand-text">
+            <h1>EL <span>GOCHO</span></h1>
+            <p>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              COMERCIAL FERRETERO • ¡SÍ HAY!
+            </p>
+          </div>
+        </a>
+
+        <!-- Search Bar -->
+        <div class="nav-search-container">
+          <svg class="search-icon-inside" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input 
+            type="text" 
+            id="search-input" 
+            class="nav-search-input" 
+            placeholder="Buscar tornillos, taladros, tubos, pinturas, cables..."
+            aria-label="Buscar en la ferretería"
+          >
+        </div>
+
+        <!-- Currency Switcher & Cart Action -->
+        <div class="nav-actions">
+          <!-- Currency Toggle Switcher -->
+          <div class="currency-switcher" title="Cambiar moneda de visualización">
+            <button id="btn-currency-usd" class="currency-btn active" type="button">
+              <span>$</span> USD
+            </button>
+            <button id="btn-currency-ves" class="currency-btn" type="button">
+              <span>Bs.</span> VEF
+            </button>
+          </div>
+
+          <!-- Cart Drawer Button -->
+          <button id="cart-toggle-btn" class="cart-toggle-btn" type="button" aria-label="Abrir Cesta">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="cart-btn-label">Cesta</span>
+            <span id="nav-cart-count" class="cart-counter-badge">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-pattern"></div>
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span>⚡ Materiales y Herramientas Profesionales</span>
+        </div>
+        <h2 class="hero-title">
+          Lo que buscas para tu obra y hogar, <span class="highlight">¡aquí sí hay!</span>
+        </h2>
+        <p class="hero-subtitle">
+          Calidad garantizada en herramientas, plomería, electricidad y pinturas con stock en tiempo real. Selecciona lo que necesitas y envía tu pedido directamente a nuestro WhatsApp con tus precios en Dólares o Bolívares.
+        </p>
+
+        <div class="hero-features">
+          <div class="hero-feature-item">
+            <svg class="hero-feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Stock Real y Verificado</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg class="hero-feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Precios en USD y Bolívares</span>
+          </div>
+          <div class="hero-feature-item">
+            <svg class="hero-feature-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>Pedido Directo a WhatsApp</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-logo-box">
+        <div class="hero-logo-card">
+          <img src="assets/logo.png" alt="Comercial Ferretero El Gocho" class="hero-logo-img">
+          <div class="hero-badge-slogan">¡SÍ HAY!</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Filter Bar -->
+  <nav class="category-section" aria-label="Categorías">
+    <div class="container">
+      <div class="category-scroll-container">
+        <button class="cat-chip active" data-category="all">
+          <span>🏷️</span> Todo el Catálogo
+        </button>
+        <button class="cat-chip" data-category="electricas">
+          <span>⚡</span> Herramientas Eléctricas
+        </button>
+        <button class="cat-chip" data-category="manuales">
+          <span>🔨</span> Herramientas Manuales
+        </button>
+        <button class="cat-chip" data-category="plomeria">
+          <span>🚰</span> Plomería & Grifería
+        </button>
+        <button class="cat-chip" data-category="electricidad">
+          <span>💡</span> Electricidad & Iluminación
+        </button>
+        <button class="cat-chip" data-category="pinturas">
+          <span>🎨</span> Pinturas & Acabados
+        </button>
+        <button class="cat-chip" data-category="fijaciones">
+          <span>🔩</span> Tornillería & Fijaciones
+        </button>
+        <button class="cat-chip" data-category="construccion">
+          <span>🏗️</span> Construcción & Seguridad
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content & Products Catalog -->
+  <main class="container">
+    <!-- Catalog Header -->
+    <div class="catalog-header">
+      <div class="catalog-title-group">
+        <h2>
+          <span>📦</span> Catálogo de Artículos Disponibles
+        </h2>
+        <span id="catalog-counter-text" class="catalog-counter">Cargando productos...</span>
+      </div>
+
+      <div class="sort-and-filters">
+        <label for="sort-select" style="font-size: 0.85rem; font-weight: 600; color: #475569;">Ordenar por:</label>
+        <select id="sort-select" class="sort-select" aria-label="Ordenar productos">
+          <option value="default">Recomendados</option>
+          <option value="price-low">Precio: Menor a Mayor</option>
+          <option value="price-high">Precio: Mayor a Menor</option>
+          <option value="name-asc">Nombre (A - Z)</option>
+          <option value="stock-high">Mayor Stock Disponible</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Products Grid (Rendered by JS) -->
+    <div id="products-grid" class="products-grid" aria-live="polite">
+      <!-- Dynamic Products will be injected here -->
+    </div>
+  </main>
+
+  <!-- Slide-Over Shopping Cart Drawer -->
+  <div id="cart-drawer-overlay" class="cart-drawer-overlay" aria-hidden="true"></div>
+  <aside id="cart-drawer" class="cart-drawer" aria-labelledby="cart-title" role="dialog" aria-modal="true">
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <h3 id="cart-title">Tu Cesta Ferretera</h3>
+      </div>
+      <button id="cart-drawer-close" class="cart-drawer-close" aria-label="Cerrar Cesta">✕</button>
+    </div>
+
+    <!-- Scrollable Items List -->
+    <div id="cart-items-list" class="cart-items-list">
+      <!-- Items dynamically injected here -->
+    </div>
+
+    <!-- Cart Footer & WhatsApp Checkout Form -->
+    <div id="cart-drawer-footer" class="cart-drawer-footer">
+      <div class="cart-totals-box">
+        <div class="cart-totals-row">
+          <span>Subtotal:</span>
+          <span id="cart-rate-notice" style="font-size: 0.78rem; color: #0284c7; font-weight: 700;"></span>
+        </div>
+        <div class="cart-totals-row main-total">
+          <span>Total a Pagar:</span>
+          <span id="cart-total-primary">$0.00</span>
+        </div>
+        <div class="cart-totals-row converted-total">
+          <span style="font-size: 0.85rem; color: #64748b;">Equivalente:</span>
+          <span id="cart-total-converted">Bs. 0.00</span>
+        </div>
+      </div>
+
+      <!-- Checkout Details Form -->
+      <form id="checkout-form" class="checkout-details-form">
+        <div class="form-group">
+          <label for="order-name">👤 Tu Nombre y Apellido:</label>
+          <input type="text" id="order-name" class="form-input" placeholder="Ej: Pedro Mendoza" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+          <div class="form-group">
+            <label for="order-phone">📱 Teléfono / WhatsApp:</label>
+            <input type="tel" id="order-phone" class="form-input" placeholder="0412-1234567" required>
+          </div>
+          <div class="form-group">
+            <label for="order-delivery">🚚 Entrega:</label>
+            <select id="order-delivery" class="form-select">
+              <option value="pickup">Retiro en Tienda</option>
+              <option value="delivery">Delivery a Domicilio</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="address-form-group" class="form-group" style="display: none;">
+          <label for="order-address">📍 Dirección de Entrega y Punto de Referencia:</label>
+          <input type="text" id="order-address" class="form-input" placeholder="Sector, calle, casa/edificio, punto de referencia">
+        </div>
+
+        <div class="form-group">
+          <label for="order-payment">💳 Método de Pago Preferido:</label>
+          <select id="order-payment" class="form-select">
+            <option value="pago-movil">Pago Móvil (Bs.)</option>
+            <option value="transferencia">Transferencia Bancaria (Banesco / Mercantil / Venezuela)</option>
+            <option value="divisas">Efectivo en Divisas ($ USD)</option>
+            <option value="zelle">Zelle</option>
+            <option value="binance">Binance Pay (USDT)</option>
+            <option value="punto">Punto de Venta en Tienda</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="order-notes">📝 Observaciones (Opcional):</label>
+          <input type="text" id="order-notes" class="form-input" placeholder="¿Algún detalle o medida específica?">
+        </div>
+
+        <button type="submit" class="whatsapp-submit-btn">
+          <!-- WhatsApp Icon -->
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+          </svg>
+          <span>Enviar Pedido a WhatsApp</span>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- Modal: Edit Exchange Rate -->
+  <div id="rate-modal-overlay" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>Modificar Tasa de Cambio</h3>
+        <button id="rate-modal-close" class="cart-drawer-close">&times;</button>
+      </div>
+      <form id="rate-form">
+        <div class="modal-body">
+          <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.25rem;">
+            Ajusta el valor de la tasa en Bolívares (Bs.) por cada 1 Dólar ($ USD). Todos los precios en la tienda y en los pedidos se actualizarán automáticamente.
+          </p>
+          <div class="form-group">
+            <label for="modal-rate-input">Tasa en Bolívares por 1 USD:</label>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span style="font-weight: 800; color: #1e3a8a; font-size: 1.1rem;">Bs.</span>
+              <input 
+                type="number" 
+                step="0.01" 
+                id="modal-rate-input" 
+                class="form-input" 
+                style="font-size: 1.1rem; font-weight: 700; color: #1e3a8a;"
+                required
+              >
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="rate-modal-cancel" class="cat-chip" style="border: 1px solid #cbd5e1;">Cancelar</button>
+          <button type="submit" class="add-to-cart-btn" style="flex: none; padding: 0.5rem 1.5rem;">Guardar Tasa</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Product Details -->
+  <div id="product-detail-modal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 580px;">
+      <div class="modal-header">
+        <h3 style="font-size: 1.1rem;">Detalles del Producto</h3>
+        <button onclick="closeProductModal()" class="cart-drawer-close">&times;</button>
+      </div>
+      <div id="product-detail-body" class="modal-body">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Mobile/Desktop Buttons -->
+  <div class="floating-actions">
+    <!-- WhatsApp Direct Chat Button -->
+    <a 
+      href="https://wa.me/584123714136?text=Hola%20Ferreter%C3%ADa%20El%20Gocho,%20quisiera%20hacer%20una%20consulta." 
+      target="_blank" 
+      class="float-btn float-btn-wa" 
+      title="Contactar por WhatsApp (+58 412 3714136)"
+    >
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+      </svg>
+    </a>
+
+    <!-- Floating Cart Toggle -->
+    <button id="float-cart-btn" class="float-btn float-btn-cart" title="Ver mi Cesta de Compra">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <circle cx="9" cy="21" r="1"></circle>
+        <circle cx="20" cy="21" r="1"></circle>
+        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+      </svg>
+      <span id="float-cart-count" class="float-badge">0</span>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container"></div>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+            <img src="assets/logo.png" alt="Logo El Gocho" style="width: 48px; height: 48px; border-radius: 50%;">
+            <h2>COMERCIAL FERRETERO EL GOCHO</h2>
+          </div>
+          <p>
+            ¡Sí hay! Tu ferretería de confianza con amplio surtido en herramientas, plomería, electricidad, iluminación, tornillería y materiales de construcción.
+          </p>
+          <div style="display: flex; gap: 0.5rem; align-items: center; color: #facc15; font-weight: 700;">
+            <span>WhatsApp Directo:</span>
+            <a href="https://wa.me/584123714136" target="_blank" style="color: #22c55e; text-decoration: none;">+58 412 3714136</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Departamentos</h4>
+          <ul class="footer-links">
+            <li><a href="javascript:void(0)" onclick="resetFilters()">Herramientas Eléctricas</a></li>
+            <li><a href="javascript:void(0)" onclick="resetFilters()">Herramientas Manuales</a></li>
+            <li><a href="javascript:void(0)" onclick="resetFilters()">Plomería y Grifería</a></li>
+            <li><a href="javascript:void(0)" onclick="resetFilters()">Electricidad e Iluminación</a></li>
+            <li><a href="javascript:void(0)" onclick="resetFilters()">Pinturas y Acabados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Formas de Pago</h4>
+          <ul class="footer-links">
+            <li><span>✓ Pago Móvil Interbancario</span></li>
+            <li><span>✓ Transferencias Nacionales</span></li>
+            <li><span>✓ Dólares en Efectivo</span></li>
+            <li><span>✓ Zelle y Binance Pay</span></li>
+            <li><span>✓ Punto de Venta</span></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Horario de Atención</h4>
+          <ul class="footer-links">
+            <li><span>Lunes a Viernes: 8:00 AM - 5:30 PM</span></li>
+            <li><span>Sábados: 8:00 AM - 3:00 PM</span></li>
+            <li><span>Domingos: Entregas programadas</span></li>
+            <li style="margin-top: 0.5rem;">
+              <span style="color: #4ade80; font-weight: 700;">● Tienda Abierta y Operativa</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Comercial Ferretero El Gocho - "¡Sí hay!". Todos los derechos reservados.
+        </div>
+        <div style="display: flex; gap: 1rem;">
+          <a href="https://wa.me/584123714136" target="_blank" style="color: #25d366; text-decoration: none; font-weight: 700;">WhatsApp: 584123714136</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
